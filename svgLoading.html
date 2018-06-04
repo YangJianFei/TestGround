@@ -16,7 +16,25 @@
      stroke: currentColor;
      stroke-linecap: round;
      stroke-width: 3.6;
-     stroke-dasharray: 125.664;
+     stroke-dasharray: 103.044;
+     animation: loading 2s ease-out infinite;
+     -webkit-animation: loading 2s ease-out infinite;
+   }
+   @keyframes loading{
+      from: {
+         stroke-dashoffset: 0;
+      }
+      to: {      
+         stroke-dashoffset: 103.044px;
+      }
+   }
+   @-webkit-keyframes loading{
+      from: {
+         stroke-dashoffset: 0;
+      }
+      to: {      
+         stroke-dashoffset: 103.044px;
+      }
    }
    </style>
 </head>
