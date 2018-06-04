@@ -6,23 +6,30 @@
    <meta name="viewport" content="width=device-width,initial-scale=1.0">
    <style>
    .svgLoading {
-     display: inline-block;    
-     color: green;
+      display: inline-block;    
+      color: green;
+      animation: loading 1.4s linear infinite;
    }
    .svg {        
-     width: 40px;
-     height: 40px;
+      width: 40px;
+      height: 40px;
    }
    .svg .circle {
       stroke: currentColor;
       stroke-linecap: round;
       stroke-width: 3.6;
-      animation: loading 1.4s ease-in-out infinite;
-      -webkit-animation: loading 1.4s ease-in-out infinite;
+      animation: loading-cir 1.4s ease-in-out infinite;
+      -webkit-animation: loading-cir 1.4s ease-in-out infinite;
       stroke-dasharray: 80px, 200px;
       stroke-dashoffset: 0px;
    }
-   @keyframes loading{
+   @keyframes loading {
+      transform: rotate(360deg);
+   }
+   @-webkit-keyframes loading {
+      transform: rotate(360deg);
+   }
+   @keyframes loading-cir{
       0% {
          stroke-dasharray: 1px, 200px;
          stroke-dashoffset: 0px;
@@ -36,7 +43,7 @@
          stroke-dashoffset: -120px;
       }
    }
-   @-webkit-keyframes loading{
+   @-webkit-keyframes loading-cir{
       0% {
          stroke-dasharray: 1px, 200px;
          stroke-dashoffset: 0px;
