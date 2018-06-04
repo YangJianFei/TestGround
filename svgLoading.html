@@ -7,18 +7,19 @@
    <style>
    .svgLoading {
      color: green;
+     display: inline-block;
    }
    .svg {
      width: 40px;
      height: 40px;
    }
    .svg .circle {
-     stroke: currentColor;
-     stroke-linecap: round;
-     stroke-width: 3.6;
-     stroke-dasharray: 103.044;
-     animation: loading 2s ;
-     -webkit-animation: loading 2s ;
+      stroke: currentColor;
+      stroke-linecap: round;
+      stroke-width: 3.6;
+      animation: loading 1.4s ease-in-out infinite;
+      stroke-dasharray: 80px, 200px;
+      stroke-dashoffset: 0px;
    }
    @keyframes loading{
       from: {
@@ -29,11 +30,17 @@
       }
    }
    @-webkit-keyframes loading{
-      from: {
+      0% {
+         stroke-dasharray: 1px, 200px;
          stroke-dashoffset: 0px;
       }
-      to: {      
-         stroke-dashoffset: 103.044px;
+      50% {
+         stroke-dasharray: 100px, 200px;
+         stroke-dashoffset: -15px;
+      }
+      100% {      
+         stroke-dasharray: 100px, 200px;
+         stroke-dashoffset: -120px;
       }
    }
    </style>
@@ -41,7 +48,7 @@
 <body>
   <div class="svgLoading">
      <svg class="svg">
-       <circle class="circle" cx="20" cy="20" r="16.4" fill="none"></circle>
+       <circle class="circle" cx="25" cy="25" r="20" fill="none"></circle>
      </svg>
   </div>
 </body>
