@@ -9,7 +9,7 @@
       display: inline-block;    
       width: 40px;
       height: 40px;  
-      color: green;
+      color: red;
       animation: loading 1.4s linear infinite;
    }
    .svg {        
@@ -26,12 +26,26 @@
       stroke-dashoffset: 0px;
    }
    @keyframes loading {
+      0% {
+         color: red;
+      }
+      50% {
+         color: #2196f3;
+      }
       100% {
+         color: purple;
          transform: rotate(360deg);
       }
    }
    @-webkit-keyframes loading {
+      0% {
+         color: red;
+      }
+      50% {
+         color: #2196f3;
+      }
       100% {
+         color: purple;
          transform: rotate(360deg);
       }
    }
